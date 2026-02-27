@@ -34,3 +34,14 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Local asset files (raw images, research docs — not needed by Vercel)
+*.gdoc
+ROSS_PATEL_RESEARCH.md
+Polyamoross_pressshots/
+SSC08058.jpg
+GEI_ALL_213.jpg
+GEI_ALL_214.jpg
+GEI_ALL_215.jpg
+GEI_ALL_219.jpg
+2025_05_Berlin*
