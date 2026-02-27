@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rosspatel-web",
+      "runtimeExecutable": "/Users/Ross/.nvm/versions/node/v24.14.0/bin/node",
+      "runtimeArgs": ["/Users/Ross/.nvm/versions/node/v24.14.0/bin/npm", "run", "dev", "--", "--port", "3457"],
+      "port": 3457
+    }
+  ]
+}

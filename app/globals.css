@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --color-black:   #0a0a0a;
+  --color-surface: #141414;
+  --color-teal:    #00c4b4;
+  --color-teal-dark: #007a6e;
+  --color-red:     #e8432d;
+  --color-amber:   #f5a623;
+  --color-white:   #f5f5f0;
+  --color-grey:    #6b7280;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-teal);
+  color: var(--color-black);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal-dark);
+  border-radius: 3px;
+}
+
+/* ─── Utility classes ───────────────────────────────────────────────────────── */
+.section-padding {
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: clamp(4rem, 10vw, 8rem);
+  padding-left: clamp(1.5rem, 6vw, 8rem);
+  padding-right: clamp(1.5rem, 6vw, 8rem);
+}
+
+.text-hero {
+  font-size: clamp(2rem, 5.5vw, 5.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.text-section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-family: var(--font-display), system-ui, sans-serif;
+}
