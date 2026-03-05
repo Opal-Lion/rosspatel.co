@@ -22,7 +22,7 @@ export default function Projects() {
             Projects & Initiatives
           </p>
           <h2 className="text-section-title text-white">
-            Where I show up.
+            Find me at.
           </h2>
         </FadeIn>
 
