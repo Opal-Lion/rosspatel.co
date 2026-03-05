@@ -120,7 +120,7 @@ export const events: Event[] = [
 
   {
     id: "club-love-loco-klub-2026",
-    title: "Club Love @ Loco Klub",
+    title: "Club Love",
     type: "dj",
     date: "2026-02-21",
     venue: "Loco Klub",
@@ -170,7 +170,7 @@ export const events: Event[] = [
     title: "Club Love",
     type: "dj",
     date: "2025-03-22",
-    venue: "",
+    venue: "Loco Klub",
     location: "Bristol, UK",
     upcoming: false,
     url: "https://clubloveltd.com",

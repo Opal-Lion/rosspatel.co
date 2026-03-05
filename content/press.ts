@@ -7,6 +7,14 @@ import type { PressItem } from "@/lib/types";
 
 export const pressItems: PressItem[] = [
   {
+    id: "agf-insider-2026",
+    publication: "A Greener Future",
+    date: "Jan 2026",
+    title: "AGF Insider: Ross Patel on Best Practices for Best Results",
+    hoverQuote: "\u201cWithout it we\u2019re highly ineffective. With it, we can actualise the futures that we dream of and hope for.\u201d",
+    url: "https://www.agreenerfuture.com/blog-agf/agf-insider-ross-patel",
+  },
+  {
     id: "music-week-live-green-2025",
     publication: "Music Week",
     date: "Feb 2025",
@@ -39,16 +47,6 @@ export const pressItems: PressItem[] = [
     url: "https://www.iq-mag.net/2024/05/live-hires-ross-patel-as-green-impact-consultant/",
   },
   {
-    id: "ft-2021",
-    publication: "Financial Times",
-    date: "2021",
-    // Title TBC — article is paywalled. Ross to confirm.
-    title: "TBC — Financial Times coverage",
-    hoverQuote: "",
-    url: "https://www.ft.com/content/d0c10195-0e2e-4913-af74-3b7057163e3f",
-    isTbc: true,
-  },
-  {
     id: "uk-music-2021",
     publication: "UK Music",
     date: "Jul 2021",
@@ -68,10 +66,8 @@ export const pressItems: PressItem[] = [
     id: "bbc-2021",
     publication: "BBC News",
     date: "Feb 2021",
-    // Title TBC — Ross to confirm exact headline.
-    title: "TBC — BBC News coverage",
-    hoverQuote: "",
+    title: "Musicians warn of touring costs after Brexit",
+    hoverQuote: "\u201cHaving a loyal fan base in one market will be the difference between having a sustained career in music, and not.\u201d",
     url: "https://www.bbc.co.uk/news/uk-england-bristol-56062365",
-    isTbc: true,
   },
 ];
