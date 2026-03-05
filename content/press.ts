@@ -19,7 +19,7 @@ export const pressItems: PressItem[] = [
     publication: "Billboard",
     date: "Nov 2024",
     title: "Are 'Green Clauses' the Answer to Creating a More Sustainable Touring Industry?",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "Doing something is always going to be better than doing nothing.",
     url: "https://www.billboard.com/pro/green-clauses-sustainable-touring-industry-live-green-ross-patel/",
   },
   {
@@ -35,7 +35,7 @@ export const pressItems: PressItem[] = [
     publication: "IQ Magazine",
     date: "May 2024",
     title: "LIVE hires Ross Patel as green impact consultant",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "A sustainable future for our industry is not a pipe dream — it's tangible and available.",
     url: "https://www.iq-mag.net/2024/05/live-hires-ross-patel-as-green-impact-consultant/",
   },
   {
