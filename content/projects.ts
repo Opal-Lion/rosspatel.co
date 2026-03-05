@@ -14,7 +14,7 @@ export const projects: Project[] = [
   },
   {
     id: "balance-eco",
-    name: "balance.eco",
+    name: "Balance.Eco",
     role: "Cultural Strategist",
     description:
       "Bridging culture and climate — embedding creative strategy at the heart of sustainability practice.",
@@ -22,10 +22,10 @@ export const projects: Project[] = [
   },
   {
     id: "uma-earthaid",
-    name: "UMA Entertainment / EarthAid",
+    name: "UMA Entertainment",
     role: "Chief Strategy Officer",
     description:
-      "Driving strategy across UMA's portfolio of music, media, and impact-led projects — including EarthAid, the global charity music event chaired by Harvey Goldsmith.",
+      "Driving strategy across UMA's portfolio of music, media, and impact-led projects.",
     url: "https://umaentertainment.com",
   },
   {

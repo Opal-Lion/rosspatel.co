@@ -13,7 +13,7 @@ const dimensions = [
     description:
       "As LIVE Green Impact Consultant, leading the decarbonisation of the UK's live events sector — connecting industry, government, artists, and the United Nations around collaborative, intersectional climate solutions.",
     tags: ["LIVE Green", "Decarbonisation", "Policy", "Events Industry"],
-    accent: "#00c4b4",
+    accent: "#05d133",
     highlight: "Top speaking events: ILMC · ADE · GEI18 · BDME · Event Production Showcase",
   },
   {
@@ -22,7 +22,7 @@ const dimensions = [
     description:
       "Council Member of the Global Artivism movement and Co-Chair of the Global Music Advisory Board at In Place of War — using cultural power as a lever for systemic social and environmental change.",
     tags: ["Global Artivism", "In Place of War", "Social Change", "Culture"],
-    accent: "#e8432d",
+    accent: "#72df0c",
   },
   {
     number: "04",
@@ -30,7 +30,7 @@ const dimensions = [
     description:
       "Keynotes, panels, and moderated conversations at internationally recognised industry events — bringing sharp strategic thinking and genuine personal experience to the stage.",
     tags: ["Keynotes", "Panels", "ILMC", "ADE", "GEI", "BDME"],
-    accent: "#f5a623",
+    accent: "#ecc413",
     highlight: "ILMC · Amsterdam Dance Event · Berlin Dance Music Event · GEI18 · Event Production Showcase",
   },
   {
