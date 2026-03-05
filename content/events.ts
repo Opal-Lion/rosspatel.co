@@ -98,6 +98,7 @@ export const events: Event[] = [
     venue: "Royal Lancaster Hotel",
     location: "London, UK",
     upcoming: false,
+    url: "https://www.agreenerfuture.com/blog-agf/gei17-welcomes-music-and-climate-heavyweights-as-we-announce-the-full-agenda",
   },
   {
     id: "ade-2024",
