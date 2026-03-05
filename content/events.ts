@@ -48,6 +48,7 @@ export const events: Event[] = [
     venue: "Royal Lancaster Hotel",
     location: "London, UK",
     upcoming: false,
+    url: "https://www.agreenerfuture.com/gei",
   },
   {
     id: "un-accelerator-city-2025",
@@ -57,6 +58,7 @@ export const events: Event[] = [
     venue: "",
     location: "Liverpool, UK",
     upcoming: false,
+    url: "https://cultureliverpool.co.uk/news/liverpool-hosts-expedition-two-next-phase-of-un-accelerator-city-for-climate-action/",
   },
   {
     id: "bdme-2025",
@@ -66,6 +68,7 @@ export const events: Event[] = [
     venue: "",
     location: "Berlin, Germany",
     upcoming: false,
+    url: "https://berlin-dance-music-event.com/",
   },
   {
     id: "music-sustainability-summit-2025",
@@ -75,6 +78,7 @@ export const events: Event[] = [
     venue: "",
     location: "Los Angeles, USA",
     upcoming: false,
+    url: "https://www.musicsustainability.org/summit",
   },
   {
     id: "ilmc-37",
@@ -130,12 +134,13 @@ export const events: Event[] = [
   },
   {
     id: "come-bye-festival-2025",
-    title: "Come Bye Festival",
+    title: "Come By Festival",
     type: "dj",
-    date: "2025-09-13",
-    venue: "Come Bye Festival",
-    location: "UK",
+    date: "2025-09-11",
+    venue: "",
+    location: "Abergavenny, UK",
     upcoming: false,
+    url: "https://www.instagram.com/come_bye_festival/",
   },
   {
     id: "lost-village-2025",
@@ -149,12 +154,13 @@ export const events: Event[] = [
   },
   {
     id: "just-jack-motion-2025",
-    title: "Just Jack at Motion",
+    title: "Just Jack - 24hr Motion Closing Party",
     type: "dj",
     date: "2025-07-19",
     venue: "Motion",
     location: "Bristol, UK",
     upcoming: false,
+    url: "https://crackmagazine.net/2025/07/motion-closing-event-just-jack/",
   },
   {
     id: "carbon-project-2025",
