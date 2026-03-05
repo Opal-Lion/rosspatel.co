@@ -2,13 +2,34 @@
 // Speaking and DJ events — past and upcoming.
 // Set upcoming: true for future events; they'll be highlighted on the site.
 // Type: "speaking" | "dj"
-// Sorted newest first within each group.
 
 import type { Event } from "@/lib/types";
 
 export const events: Event[] = [
 
   // ── Speaking ──────────────────────────────────────────────────────────────
+
+  // Upcoming
+  {
+    id: "earthfest-2026",
+    title: "Earthfest",
+    type: "speaking",
+    date: "2026-06-25",
+    venue: "",
+    location: "UK",
+    upcoming: true,
+  },
+  {
+    id: "climate-live-2026",
+    title: "Climate Live x Earth Percent",
+    type: "speaking",
+    date: "2026-04-08",
+    venue: "Brian Eno's Studio",
+    location: "London, UK",
+    upcoming: true,
+  },
+
+  // Past
   {
     id: "eps-2026",
     title: "Event Production Showcase",
@@ -17,13 +38,23 @@ export const events: Event[] = [
     venue: "ExCeL London",
     location: "London, UK",
     upcoming: false,
+    url: "https://www.eventproductionshow.co.uk/",
+  },
+  {
+    id: "gei18-2026",
+    title: "Green Events & Innovations Conference (GEI18)",
+    type: "speaking",
+    date: "2026-02-25",
+    venue: "Royal Lancaster Hotel",
+    location: "London, UK",
+    upcoming: false,
   },
   {
     id: "un-accelerator-city-2025",
     title: "United Nations Accelerator City — Expedition Two",
     type: "speaking",
     date: "2025-11-28",
-    venue: "TBC",
+    venue: "",
     location: "Liverpool, UK",
     upcoming: false,
   },
@@ -31,8 +62,8 @@ export const events: Event[] = [
     id: "bdme-2025",
     title: "Berlin Dance Music Event",
     type: "speaking",
-    date: "2025-05-01",
-    venue: "TBC",
+    date: "2025-05-09",
+    venue: "",
     location: "Berlin, Germany",
     upcoming: false,
   },
@@ -41,7 +72,7 @@ export const events: Event[] = [
     title: "Music Sustainability Summit",
     type: "speaking",
     date: "2025-04-15",
-    venue: "TBC",
+    venue: "",
     location: "Los Angeles, USA",
     upcoming: false,
   },
@@ -56,12 +87,12 @@ export const events: Event[] = [
     url: "https://37.ilmc.com/speaker/ross-patel/",
   },
   {
-    id: "gei18",
-    title: "Green Events & Innovations Conference (GEI18)",
+    id: "gei17-2025",
+    title: "Green Events & Innovations Conference (GEI17)",
     type: "speaking",
-    date: "2025-02-01",
-    venue: "TBC",
-    location: "UK",
+    date: "2025-02-26",
+    venue: "Royal Lancaster Hotel",
+    location: "London, UK",
     upcoming: false,
   },
   {
@@ -86,6 +117,17 @@ export const events: Event[] = [
   },
 
   // ── DJ / Polyamoross ──────────────────────────────────────────────────────
+
+  {
+    id: "club-love-loco-klub-2026",
+    title: "Club Love @ Loco Klub",
+    type: "dj",
+    date: "2026-02-21",
+    venue: "Loco Klub",
+    location: "Bristol, UK",
+    upcoming: false,
+    url: "https://clubloveltd.com",
+  },
   {
     id: "come-bye-festival-2025",
     title: "Come Bye Festival",
@@ -103,6 +145,7 @@ export const events: Event[] = [
     venue: "Lost Village Festival",
     location: "Lincolnshire, UK",
     upcoming: false,
+    url: "https://lostvillagefestival.com/",
   },
   {
     id: "just-jack-motion-2025",
@@ -118,7 +161,7 @@ export const events: Event[] = [
     title: "The Carbon Project",
     type: "dj",
     date: "2025-07-01",
-    venue: "TBC",
+    venue: "",
     location: "London, UK",
     upcoming: false,
   },
@@ -127,7 +170,7 @@ export const events: Event[] = [
     title: "Club Love",
     type: "dj",
     date: "2025-03-22",
-    venue: "TBC",
+    venue: "",
     location: "Bristol, UK",
     upcoming: false,
     url: "https://clubloveltd.com",
