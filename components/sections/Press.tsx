@@ -12,7 +12,7 @@ export default function Press() {
             Press
           </p>
           <h2 className="text-section-title text-white">
-            In the press.
+            In the news.
           </h2>
         </FadeIn>
 
