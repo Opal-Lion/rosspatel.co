@@ -16,7 +16,7 @@ export const events: Event[] = [
     type: "speaking",
     date: "2026-06-25",
     venue: "",
-    location: "UK",
+    location: "London, UK",
     upcoming: true,
   },
   {
