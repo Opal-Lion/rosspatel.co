@@ -12,14 +12,16 @@ export default function Press() {
             Press
           </p>
           <h2 className="text-section-title text-white">
-            As seen in.
+            In the press.
           </h2>
         </FadeIn>
 
         {/* Press grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px">
-          {pressItems.map((item) => (
-            <PressCard key={item.id} item={item} />
+          {pressItems.map((item, i) => (
+            <FadeIn key={item.id} direction="up" delay={i * 0.07} className="h-full">
+              <PressCard item={item} />
+            </FadeIn>
           ))}
         </div>
       </div>
@@ -32,7 +34,7 @@ function PressCard({ item }: { item: typeof pressItems[0] }) {
 
   return (
     <div
-      className={`group relative overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 transition-all duration-300 ${
+      className={`group relative overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 transition-all duration-300 h-full ${
         isTbc ? "opacity-40" : "hover:border-white/15 cursor-pointer"
       }`}
     >

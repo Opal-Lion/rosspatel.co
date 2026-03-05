@@ -11,7 +11,7 @@ export const pressItems: PressItem[] = [
     publication: "Music Week",
     date: "Feb 2025",
     title: "LIVE unveils sustainability initiative for touring artists",
-    hoverQuote: "We are urging artists to make their voice heard and their opinion known.",
+    hoverQuote: "\u201cWe are urging artists to make their voice heard and their opinion known.\u201d",
     url: "https://www.musicweek.com/live/read/live-unveils-sustainability-initiative-for-touring-artists/091469",
   },
   {
@@ -19,7 +19,7 @@ export const pressItems: PressItem[] = [
     publication: "Billboard",
     date: "Nov 2024",
     title: "Are 'Green Clauses' the Answer to Creating a More Sustainable Touring Industry?",
-    hoverQuote: "Doing something is always going to be better than doing nothing.",
+    hoverQuote: "\u201cDoing something is always going to be better than doing nothing.\u201d",
     url: "https://www.billboard.com/pro/green-clauses-sustainable-touring-industry-live-green-ross-patel/",
   },
   {
@@ -27,7 +27,7 @@ export const pressItems: PressItem[] = [
     publication: "Vision Sustainable Events",
     date: "Sep 2024",
     title: "Green Leader Q&A #45: Ross Patel, Founder, CEO & Consultant in Music, Climate & Tech",
-    hoverQuote: "No secrets, just care and compassion for the world and everything on it.",
+    hoverQuote: "\u201cNo secrets, just care and compassion for the world and everything on it.\u201d",
     url: "https://visionsustainableevents.org/green-leader-qa-45-ross-patel-founder-ceo-consultant-in-music-climate-tech/",
   },
   {
@@ -35,7 +35,7 @@ export const pressItems: PressItem[] = [
     publication: "IQ Magazine",
     date: "May 2024",
     title: "LIVE hires Ross Patel as green impact consultant",
-    hoverQuote: "A sustainable future for our industry is not a pipe dream — it's tangible and available.",
+    hoverQuote: "\u201cA sustainable future for our industry is not a pipe dream — it\u2019s tangible and available.\u201d",
     url: "https://www.iq-mag.net/2024/05/live-hires-ross-patel-as-green-impact-consultant/",
   },
   {
@@ -53,7 +53,7 @@ export const pressItems: PressItem[] = [
     publication: "UK Music",
     date: "Jul 2021",
     title: "Let The Music Move: Manager Ross Patel on the Challenges Faced by Musicians & Managers Touring the EU Post-Brexit",
-    hoverQuote: "There is no doubt these extra costs and red tape are detrimental to the band's performance.",
+    hoverQuote: "\u201cThere is no doubt these extra costs and red tape are detrimental to the band\u2019s performance.\u201d",
     url: "https://www.ukmusic.org/news/let-the-music-move-manager-ross-patel-on-the-challenges-faced-by-musicians-managers-touring-the-eu-post-brexit/",
   },
   {
@@ -61,7 +61,7 @@ export const pressItems: PressItem[] = [
     publication: "Music Week",
     date: "Feb 2021",
     title: "Roadies to nowhere? Artist manager Ross Patel on finding an urgent solution to the EU touring row",
-    hoverQuote: "We hope our collective voices are heard to bring these crucial issues back to the table for a resolution before it's too late.",
+    hoverQuote: "\u201cWe hope our collective voices are heard to bring these crucial issues back to the table for a resolution before it\u2019s too late.\u201d",
     url: "https://www.musicweek.com/opinion/read/roadies-to-nowhere-artist-manager-ross-patel-on-finding-an-urgent-solution-to-the-eu-touring-row/082563",
   },
   {
