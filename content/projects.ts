@@ -42,6 +42,7 @@ export const projects: Project[] = [
     role: "Council Member",
     description:
       "Part of an international council fusing art and activism — using creative expression to drive systemic social and environmental change.",
+    url: "https://www.globalartivism.org/",
   },
   {
     id: "club-love",
