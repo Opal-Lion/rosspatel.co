@@ -11,7 +11,7 @@ export const pressItems: PressItem[] = [
     publication: "Music Week",
     date: "Feb 2025",
     title: "LIVE unveils sustainability initiative for touring artists",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "We are urging artists to make their voice heard and their opinion known.",
     url: "https://www.musicweek.com/live/read/live-unveils-sustainability-initiative-for-touring-artists/091469",
   },
   {
@@ -21,6 +21,14 @@ export const pressItems: PressItem[] = [
     title: "Are 'Green Clauses' the Answer to Creating a More Sustainable Touring Industry?",
     hoverQuote: "Quote to be added.",
     url: "https://www.billboard.com/pro/green-clauses-sustainable-touring-industry-live-green-ross-patel/",
+  },
+  {
+    id: "vision-sustainable-events-2024",
+    publication: "Vision Sustainable Events",
+    date: "Sep 2024",
+    title: "Green Leader Q&A #45: Ross Patel, Founder, CEO & Consultant in Music, Climate & Tech",
+    hoverQuote: "No secrets, just care and compassion for the world and everything on it.",
+    url: "https://visionsustainableevents.org/green-leader-qa-45-ross-patel-founder-ceo-consultant-in-music-climate-tech/",
   },
   {
     id: "iq-live-hire-2024",
@@ -36,7 +44,7 @@ export const pressItems: PressItem[] = [
     date: "2021",
     // Title TBC — article is paywalled. Ross to confirm.
     title: "TBC — Financial Times coverage",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "",
     url: "https://www.ft.com/content/d0c10195-0e2e-4913-af74-3b7057163e3f",
     isTbc: true,
   },
@@ -45,7 +53,7 @@ export const pressItems: PressItem[] = [
     publication: "UK Music",
     date: "Jul 2021",
     title: "Let The Music Move: Manager Ross Patel on the Challenges Faced by Musicians & Managers Touring the EU Post-Brexit",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "There is no doubt these extra costs and red tape are detrimental to the band's performance.",
     url: "https://www.ukmusic.org/news/let-the-music-move-manager-ross-patel-on-the-challenges-faced-by-musicians-managers-touring-the-eu-post-brexit/",
   },
   {
@@ -53,7 +61,7 @@ export const pressItems: PressItem[] = [
     publication: "Music Week",
     date: "Feb 2021",
     title: "Roadies to nowhere? Artist manager Ross Patel on finding an urgent solution to the EU touring row",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "We hope our collective voices are heard to bring these crucial issues back to the table for a resolution before it's too late.",
     url: "https://www.musicweek.com/opinion/read/roadies-to-nowhere-artist-manager-ross-patel-on-finding-an-urgent-solution-to-the-eu-touring-row/082563",
   },
   {
@@ -62,7 +70,7 @@ export const pressItems: PressItem[] = [
     date: "Feb 2021",
     // Title TBC — Ross to confirm exact headline.
     title: "TBC — BBC News coverage",
-    hoverQuote: "Quote to be added.",
+    hoverQuote: "",
     url: "https://www.bbc.co.uk/news/uk-england-bristol-56062365",
     isTbc: true,
   },
