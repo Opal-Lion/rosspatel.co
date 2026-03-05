@@ -10,7 +10,7 @@ export const projects: Project[] = [
     role: "Impact Consultant",
     description:
       "Leading collaborative, intersectional climate action across the UK's live events industry — connecting 4,000+ businesses, 40,000+ artists, government, and the United Nations.",
-    url: "https://www.livemusic.org.uk",
+    url: "https://www.livemusic.biz/",
   },
   {
     id: "balance-eco",
