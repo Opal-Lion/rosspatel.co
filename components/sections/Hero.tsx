@@ -25,6 +25,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 section-padding w-full pb-20 md:pb-28">
+        <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl">
           {/* Main headline */}
           <h1 className="text-hero text-white mb-6 whitespace-nowrap">
@@ -57,6 +58,7 @@ export default function Hero() {
               Explore ↓
             </a>
           </div>
+        </div>
         </div>
       </div>
 
