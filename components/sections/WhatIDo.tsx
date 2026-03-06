@@ -1,3 +1,9 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import FadeIn from "@/components/ui/FadeIn";
+
 const dimensions = [
   {
     number: "01",
@@ -43,9 +49,22 @@ const dimensions = [
   },
 ];
 
-import FadeIn from "@/components/ui/FadeIn";
+// How many px each card overlaps the one above it when all are collapsed.
+// Chosen so the full number is still visible above the overlapping card.
+const OVERLAP = 20;
 
 export default function WhatIDo() {
+  const [active, setActive] = useState<number | null>(null);
+  const toggle = (i: number) => setActive((prev) => (prev === i ? null : i));
+
+  // Cards before/at the active card stay stacked.
+  // Cards after the active card shift down so expanded content isn't hidden.
+  const getMarginTop = (i: number) => {
+    if (i === 0) return 0;
+    if (active !== null && i > active) return 1;
+    return -OVERLAP;
+  };
+
   return (
     <section id="what-i-do" className="section-padding bg-[#141414]">
       <div className="max-w-7xl mx-auto">
@@ -58,48 +77,97 @@ export default function WhatIDo() {
           </h2>
         </FadeIn>
 
-        <div className="space-y-px">
-          {dimensions.map((dim, i) => (
-            <FadeIn key={dim.number} direction="up" delay={i * 0.07}>
-            <div
-              key={dim.number}
-              className="group flex flex-col md:flex-row gap-6 md:gap-12 p-8 md:p-10 bg-[#0a0a0a] hover:bg-[#0f0f0f] border border-white/5 hover:border-white/10 transition-all duration-300 cursor-default"
-            >
-              {/* Number */}
-              <span
-                className="font-display text-4xl md:text-5xl font-bold opacity-20 group-hover:opacity-40 transition-opacity flex-shrink-0 w-16"
-                style={{ color: dim.accent }}
-              >
-                {dim.number}
-              </span>
+        <div className="relative">
+          {dimensions.map((dim, i) => {
+            const isActive = active === i;
 
-              {/* Content */}
-              <div className="flex-1">
-                <h3 className="font-display text-xl md:text-2xl text-white mb-3 group-hover:text-[#00c4b4] transition-colors">
-                  {dim.title}
-                </h3>
-                <p className="font-body text-white/60 text-base leading-relaxed mb-4 max-w-2xl">
-                  {dim.description}
-                </p>
-                {dim.highlight && (
-                  <p className="font-body text-xs text-[#00c4b4]/70 tracking-wide mb-4">
-                    {dim.highlight}
-                  </p>
-                )}
-                <div className="flex flex-wrap gap-2">
-                  {dim.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-body text-xs px-2.5 py-1 bg-white/5 text-white/40 tracking-wide"
+            return (
+              // Outer div controls stacking via CSS margin + z-index
+              <div
+                key={dim.number}
+                style={{
+                  position: "relative",
+                  zIndex: isActive ? 50 : i + 1,
+                  marginTop: `${getMarginTop(i)}px`,
+                  transition: "margin-top 0.4s ease-in-out",
+                }}
+              >
+                <FadeIn direction="up" delay={i * 0.07}>
+                  <div
+                    className={`bg-[#0a0a0a] border transition-colors duration-300 ${
+                      isActive ? "border-white/10" : "border-white/5"
+                    }`}
+                  >
+                    {/* Header — always visible, click to toggle */}
+                    <button
+                      className="w-full flex items-start gap-6 md:gap-10 px-8 md:px-10 py-5 text-left group"
+                      onClick={() => toggle(i)}
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                      {/* Number */}
+                      <span
+                        className="font-display text-5xl font-bold leading-none flex-shrink-0 w-16 opacity-30 group-hover:opacity-60 transition-opacity"
+                        style={{ color: dim.accent }}
+                      >
+                        {dim.number}
+                      </span>
+
+                      {/* Title */}
+                      <h3 className="font-display text-xl md:text-2xl text-white group-hover:text-[#00c4b4] transition-colors flex-1 pt-1 leading-tight">
+                        {dim.title}
+                      </h3>
+
+                      {/* Arrow — rotates 180° when open */}
+                      <motion.span
+                        animate={{ rotate: isActive ? 180 : 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="w-8 h-8 border border-white/20 text-white/50 group-hover:border-white/40 group-hover:text-white/70 transition-colors flex items-center justify-center text-sm flex-shrink-0 mt-1"
+                      >
+                        ↓
+                      </motion.span>
+                    </button>
+
+                    {/* Expandable content */}
+                    <AnimatePresence initial={false}>
+                      {isActive && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.4, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          {/* Indent to align with title (spacer = number width + gap) */}
+                          <div className="flex gap-6 md:gap-10 px-8 md:px-10 pb-8 md:pb-10">
+                            <div className="w-16 flex-shrink-0" />
+                            <div className="flex-1">
+                              <p className="font-body text-white/60 text-base leading-relaxed mb-4 max-w-2xl">
+                                {dim.description}
+                              </p>
+                              {dim.highlight && (
+                                <p className="font-body text-xs text-[#00c4b4]/70 tracking-wide mb-4">
+                                  {dim.highlight}
+                                </p>
+                              )}
+                              <div className="flex flex-wrap gap-2">
+                                {dim.tags.map((tag) => (
+                                  <span
+                                    key={tag}
+                                    className="font-body text-xs px-2.5 py-1 bg-white/5 text-white/40 tracking-wide"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </FadeIn>
               </div>
-            </div>
-            </FadeIn>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

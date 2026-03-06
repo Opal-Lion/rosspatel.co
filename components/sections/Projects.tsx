@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { projects } from "@/content/projects";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -27,29 +28,48 @@ export default function Projects() {
         </FadeIn>
 
         {/* 3-up carousel — desktop */}
-        <div className="hidden md:grid grid-cols-3 gap-4">
+        <div
+          className="hidden md:grid grid-cols-3 gap-4 items-start"
+          style={{ perspective: "1200px" }}
+        >
           {/* Left card — click to go prev */}
-          <button
+          <motion.button
             onClick={prev}
-            className="text-left bg-[#141414] border border-white/5 p-8 opacity-50 hover:opacity-70 transition-all duration-300 cursor-pointer"
+            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer"
+            animate={{ opacity: 0.45, scale: 0.97, rotateY: 3, y: 6 }}
+            whileHover={{ opacity: 0.65, scale: 0.98 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             aria-label="Previous project"
           >
             <ProjectCardContent project={projects[leftIdx]} />
-          </button>
+          </motion.button>
 
           {/* Active card */}
-          <div className="bg-[#141414] border border-white/15 p-8 ring-1 ring-[#00c4b4]/20">
+          <motion.div
+            className="bg-[#141414] border border-white/15 p-8 ring-1 ring-[#00c4b4]/20"
+            animate={{
+              y: -10,
+              scale: 1,
+              rotateY: 0,
+              boxShadow:
+                "0 24px 64px rgba(0,0,0,0.6), 0 6px 24px rgba(0, 196, 180, 0.07)",
+            }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
             <ProjectCardContent project={projects[active]} showLink />
-          </div>
+          </motion.div>
 
           {/* Right card — click to go next */}
-          <button
+          <motion.button
             onClick={next}
-            className="text-left bg-[#141414] border border-white/5 p-8 opacity-50 hover:opacity-70 transition-all duration-300 cursor-pointer"
+            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer"
+            animate={{ opacity: 0.45, scale: 0.97, rotateY: -3, y: 6 }}
+            whileHover={{ opacity: 0.65, scale: 0.98 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             aria-label="Next project"
           >
             <ProjectCardContent project={projects[rightIdx]} />
-          </button>
+          </motion.button>
         </div>
 
         {/* Single card — mobile */}
