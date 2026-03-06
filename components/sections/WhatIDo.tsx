@@ -45,7 +45,7 @@ const dimensions = [
       "Performing and booking as DJ Polyamoross, creating intentionally queer, inclusive dancefloor experiences that centre safety, joy, and community. Booker at Club Love.",
     tags: ["Club Love", "Queer Spaces", "Nightlife", "Inclusive Culture"],
     accent: "#e8432d",
-    highlight: "Glastonbury · Lost Village · Come Bye Festival · Pikes Ibiza",
+    highlight: "Glastonbury · Lost Village · Come Bye Festival · Pikes Ibiza · Body Movements · Queens Yard Summer Party",
   },
 ];
 
