@@ -17,9 +17,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ross Patel — Music. Culture. Impact.",
+  title: "Ross Patel | Music. Culture. Impact.",
   description:
-    "Mx Ross Patel (they/them) — artivist, strategist, and culture maker. LIVE Green Impact Consultant, DJ Polyamoross, and consultant at the intersection of music, sustainability, and identity.",
+    "Mx Ross Patel (they/them), artivist, strategist, and culture maker. LIVE Green Impact Consultant, DJ Polyamoross, and consultant at the intersection of music, sustainability, and identity.",
   keywords: [
     "Ross Patel",
     "music consultant",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ross Patel" }],
   openGraph: {
-    title: "Ross Patel — Music. Culture. Impact.",
+    title: "Ross Patel | Music. Culture. Impact.",
     description:
       "Artivist, strategist, and culture maker operating at the intersection of music, sustainability, and identity.",
     url: "https://rosspatel.co",

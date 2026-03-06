@@ -52,7 +52,7 @@ export const events: Event[] = [
   },
   {
     id: "un-accelerator-city-2025",
-    title: "United Nations Accelerator City — Expedition Two",
+    title: "United Nations Accelerator City: Expedition Two",
     type: "speaking",
     date: "2025-11-28",
     venue: "",

@@ -43,7 +43,7 @@ export const pressItems: PressItem[] = [
     publication: "IQ Magazine",
     date: "May 2024",
     title: "LIVE hires Ross Patel as green impact consultant",
-    hoverQuote: "\u201cA sustainable future for our industry is not a pipe dream — it\u2019s tangible and available.\u201d",
+    hoverQuote: "\u201cA sustainable future for our industry is not a pipe dream. It\u2019s tangible and available.\u201d",
     url: "https://www.iq-mag.net/2024/05/live-hires-ross-patel-as-green-impact-consultant/",
   },
   {

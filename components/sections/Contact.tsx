@@ -50,7 +50,7 @@ export default function Contact() {
             </h2>
             <p className="font-body text-white/60 text-lg leading-relaxed mb-12">
               Whether you&apos;re looking for a strategic partner, a speaker who
-              challenges convention, or a DJ who creates something special — get in touch.
+              challenges convention, or a DJ who creates something special, get in touch.
             </p>
 
             {/* Social links */}
@@ -87,7 +87,7 @@ export default function Contact() {
                   Message received.
                 </p>
                 <p className="font-body text-white/50">
-                  Thanks for reaching out — I&apos;ll be in touch shortly.
+                  Thanks for reaching out. I&apos;ll be in touch shortly.
                 </p>
               </div>
             ) : (

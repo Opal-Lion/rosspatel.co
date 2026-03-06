@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { events } from "@/content/events";
 import type { EventType } from "@/lib/types";
 import FadeIn from "@/components/ui/FadeIn";
@@ -99,8 +100,13 @@ export default function Events() {
               Upcoming
             </p>
             <div className="space-y-px">
-              {upcoming.map((event) => (
-                <EventRow key={event.id} event={event} isUpcoming />
+              {upcoming.map((event, idx) => (
+                <EventRow
+                  key={`${filter}-${event.id}`}
+                  event={event}
+                  isUpcoming
+                  index={idx}
+                />
               ))}
             </div>
           </div>
@@ -113,8 +119,12 @@ export default function Events() {
               Past
             </p>
             <div className="space-y-px">
-              {paginatedPast.map((event) => (
-                <EventRow key={event.id} event={event} />
+              {paginatedPast.map((event, idx) => (
+                <EventRow
+                  key={`${filter}-${page}-${event.id}`}
+                  event={event}
+                  index={idx}
+                />
               ))}
             </div>
 
@@ -150,14 +160,19 @@ export default function Events() {
 function EventRow({
   event,
   isUpcoming = false,
+  index = 0,
 }: {
   event: (typeof events)[number];
   isUpcoming?: boolean;
+  index?: number;
 }) {
   const e = event;
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, delay: index * 0.08, ease: "easeOut" }}
       className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 border transition-colors ${
         isUpcoming
           ? "border-[#00c4b4]/20 bg-[#00c4b4]/5 hover:bg-[#00c4b4]/8"
@@ -203,6 +218,6 @@ function EventRow({
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

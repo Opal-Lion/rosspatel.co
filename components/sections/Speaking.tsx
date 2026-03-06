@@ -18,7 +18,7 @@ export default function Speaking() {
             </h2>
             <p className="font-body text-white/60 text-lg leading-relaxed mb-10">
               Ross speaks at conferences, industry events, and panels on the topics
-              that matter most — climate, culture, identity, and the future of music.
+              that matter most: climate, culture, identity, and the future of music.
               Expect sharpness, honesty, and a perspective you won&apos;t hear from anyone else.
             </p>
 

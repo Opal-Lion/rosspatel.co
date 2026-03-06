@@ -9,7 +9,7 @@ export const projects: Project[] = [
     name: "LIVE Green",
     role: "Impact Consultant",
     description:
-      "Leading collaborative, intersectional climate action across the UK's live events industry — connecting 4,000+ businesses, 40,000+ artists, government, and the United Nations.",
+      "Leading collaborative, intersectional climate action across the UK's live events industry, connecting 4,000+ businesses, 40,000+ artists, government, and the United Nations.",
     url: "https://www.livemusic.biz/",
   },
   {
@@ -17,7 +17,7 @@ export const projects: Project[] = [
     name: "Balance.Eco",
     role: "Cultural Strategist",
     description:
-      "Bridging culture and climate — embedding creative strategy at the heart of sustainability practice.",
+      "Bridging culture and climate, embedding creative strategy at the heart of sustainability practice.",
     url: "https://www.balance.eco",
   },
   {
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     name: "Global Artivism Council",
     role: "Council Member",
     description:
-      "Part of an international council fusing art and activism — using creative expression to drive systemic social and environmental change.",
+      "Part of an international council fusing art and activism, using creative expression to drive systemic social and environmental change.",
     url: "https://www.globalartivism.org/",
   },
   {
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     name: "Club Love",
     role: "Booker & DJ (Polyamoross)",
     description:
-      "Creating intentionally inclusive, queer-centred club spaces that prioritise safety, community, and joy — booking and performing as DJ Polyamoross.",
+      "Creating intentionally inclusive, queer-centred club spaces that prioritise safety, community, and joy, booking and performing as DJ Polyamoross.",
     url: "https://clubloveltd.com",
   },
 ];
