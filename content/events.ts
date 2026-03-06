@@ -256,15 +256,6 @@ export const events: Event[] = [
     upcoming: false,
   },
   {
-    id: "studio-9294-mar-2023",
-    title: "Studio 9294",
-    type: "dj",
-    date: "2023-03-25",
-    venue: "Studio 9294",
-    location: "London, England, UK",
-    upcoming: false,
-  },
-  {
     id: "ugly-cry-2023",
     title: "Ugly Cry Records Presents",
     type: "dj",
