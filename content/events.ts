@@ -248,7 +248,7 @@ export const events: Event[] = [
   },
   {
     id: "risen-festival-2023",
-    title: "Risen Festival 2023",
+    title: "Risen Festival",
     type: "dj",
     date: "2023-04-01",
     venue: "Various venues",
