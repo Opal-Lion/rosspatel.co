@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl">
           {/* Main headline */}
-          <h1 className="text-hero text-white mb-6 whitespace-nowrap">
+          <h1 className="text-hero text-white mb-10 whitespace-nowrap">
             {["Music", "Culture", "Impact"].map((word, i, arr) => (
               <span key={i}>
                 {word}
@@ -37,11 +37,6 @@ export default function Hero() {
               </span>
             ))}
           </h1>
-
-          {/* Sub-headline */}
-          <p className="font-body text-white/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            {about.heroSubline}
-          </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
@@ -68,6 +63,7 @@ export default function Hero() {
           Scroll
         </span>
         <div className="w-px h-16 bg-white/40" />
+        <span className="font-body text-xs text-white/60">↓</span>
       </div>
     </section>
   );

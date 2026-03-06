@@ -20,7 +20,6 @@ const dimensions = [
       "As LIVE Green Impact Consultant, leading the decarbonisation of the UK's live events sector — connecting industry, government, artists, and the United Nations around collaborative, intersectional climate solutions.",
     tags: ["LIVE Green", "Decarbonisation", "Policy", "Events Industry"],
     accent: "#05d133",
-    highlight: "Top speaking events: ILMC · ADE · GEI18 · BDME · Event Production Showcase",
   },
   {
     number: "03",
@@ -37,7 +36,6 @@ const dimensions = [
       "Keynotes, panels, and moderated conversations at internationally recognised industry events — bringing sharp strategic thinking and genuine personal experience to the stage.",
     tags: ["Keynotes", "Panels", "ILMC", "ADE", "GEI", "BDME"],
     accent: "#ecc413",
-    highlight: "ILMC · Amsterdam Dance Event · Berlin Dance Music Event · GEI18 · Event Production Showcase",
   },
   {
     number: "05",
@@ -46,6 +44,7 @@ const dimensions = [
       "Performing and booking as DJ Polyamoross — creating intentionally queer, inclusive dancefloor experiences that centre safety, joy, and community. Booker at Club Love.",
     tags: ["Club Love", "Queer Spaces", "Nightlife", "Inclusive Culture"],
     accent: "#e8432d",
+    highlight: "Glastonbury · Lost Village · Come Bye Festival · Pikes Ibiza",
   },
 ];
 
@@ -72,8 +71,8 @@ export default function WhatIDo() {
           <p className="font-body text-[#00c4b4] text-sm tracking-[0.2em] uppercase mb-6">
             What I Do
           </p>
-          <h2 className="text-section-title text-white max-w-2xl">
-            One person.<br />Many dimensions.
+          <h2 className="text-section-title text-white">
+            Across the board.
           </h2>
         </FadeIn>
 

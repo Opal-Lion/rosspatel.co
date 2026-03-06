@@ -62,6 +62,7 @@ export default function Contact() {
                 { label: "LinkedIn", url: "https://linkedin.com/in/rosspatel" },
                 { label: "Instagram", url: "https://instagram.com/rosswellpatel" },
                 { label: "X / Twitter", url: "https://x.com/rosswellpatel" },
+                { label: "Resident Advisor", url: "https://ra.co/dj/polyamoross" },
               ].map((link) => (
                 <a
                   key={link.label}
