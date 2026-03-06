@@ -185,7 +185,7 @@ export const events: Event[] = [
   },
   {
     id: "lovrs-lisbon-2025",
-    title: "LOVRS with Polyamoross, mx.pinky, Micaia",
+    title: "LOVRS",
     type: "dj",
     date: "2025-01-09",
     venue: "Drama Bar",
