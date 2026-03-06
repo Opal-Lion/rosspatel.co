@@ -212,10 +212,10 @@ export const events: Event[] = [
   },
   {
     id: "body-movements-winter-2024",
-    title: "Body Movements Winter 2024",
+    title: "Body Movements",
     type: "dj",
     date: "2024-02-03",
-    venue: "Body Movements Box Office",
+    venue: "Various Venues",
     location: "London, England, UK",
     upcoming: false,
   },
