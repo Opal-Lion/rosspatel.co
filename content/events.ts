@@ -194,7 +194,7 @@ export const events: Event[] = [
   },
   {
     id: "club-love-members-2024",
-    title: "Club Love Members Party",
+    title: "Club Love",
     type: "dj",
     date: "2024-05-17",
     venue: "The Loco Klub",
