@@ -239,10 +239,10 @@ export const events: Event[] = [
   },
   {
     id: "body-movements-festival-2023",
-    title: "Body Movements Festival 2023",
+    title: "Body Movements Festival",
     type: "dj",
     date: "2023-07-29",
-    venue: "Body Movements Box Office",
+    venue: "Various Venues",
     location: "London, England, UK",
     upcoming: false,
   },
