@@ -203,7 +203,7 @@ export const events: Event[] = [
   },
   {
     id: "queens-yard-2024",
-    title: "Queen's Yard Summer Party 2024",
+    title: "Queen's Yard Summer Party",
     type: "dj",
     date: "2024-05-04",
     venue: "Hackney Wick Multiple Venues",
