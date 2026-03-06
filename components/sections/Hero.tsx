@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 section-padding w-full pb-20 md:pb-28">
+      <div className="relative z-10 section-padding w-full md:pb-6">
         <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl">
           {/* Main headline */}
@@ -45,12 +45,6 @@ export default function Hero() {
               className="inline-flex items-center justify-center px-8 py-4 bg-[#00c4b4] text-[#0a0a0a] font-body font-semibold text-sm tracking-wide uppercase hover:bg-[#00c4b4]/90 transition-colors"
             >
               Work With Me
-            </a>
-            <a
-              href="#about"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white font-body font-semibold text-sm tracking-wide uppercase hover:border-white/60 hover:bg-white/5 transition-colors"
-            >
-              Explore ↓
             </a>
           </div>
         </div>

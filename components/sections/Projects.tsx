@@ -29,13 +29,13 @@ export default function Projects() {
 
         {/* 3-up carousel — desktop */}
         <div
-          className="hidden md:grid grid-cols-3 gap-4 items-start"
+          className="hidden md:grid grid-cols-3 gap-4 items-stretch"
           style={{ perspective: "1200px" }}
         >
           {/* Left card — click to go prev */}
           <motion.button
             onClick={prev}
-            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer"
+            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer h-full"
             animate={{ opacity: 0.45, scale: 0.97, rotateY: 3, y: 6 }}
             whileHover={{ opacity: 0.65, scale: 0.98 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -46,7 +46,7 @@ export default function Projects() {
 
           {/* Active card */}
           <motion.div
-            className="bg-[#141414] border border-white/15 p-8 ring-1 ring-[#00c4b4]/20"
+            className="bg-[#141414] border border-white/15 p-8 ring-1 ring-[#00c4b4]/20 h-full"
             animate={{
               y: -10,
               scale: 1,
@@ -62,7 +62,7 @@ export default function Projects() {
           {/* Right card — click to go next */}
           <motion.button
             onClick={next}
-            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer"
+            className="text-left bg-[#141414] border border-white/5 p-8 cursor-pointer h-full"
             animate={{ opacity: 0.45, scale: 0.97, rotateY: -3, y: 6 }}
             whileHover={{ opacity: 0.65, scale: 0.98 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -124,7 +124,7 @@ function ProjectCardContent({
   showLink?: boolean;
 }) {
   return (
-    <div className="flex flex-col min-h-[240px]">
+    <div className="flex flex-col h-full">
       <span className="inline-block font-body text-xs tracking-wider uppercase px-3 py-1 border border-[#00c4b4]/40 text-[#00c4b4] mb-4 self-start">
         {project.role}
       </span>
