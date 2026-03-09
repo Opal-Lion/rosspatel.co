@@ -31,10 +31,16 @@ export default function Press() {
 
 function PressCard({ item }: { item: typeof pressItems[0] }) {
   const isTbc = item.isTbc || item.title.startsWith("TBC");
+  const isLinked = !isTbc && !!item.url;
+  const Tag = isLinked ? "a" : "div";
+  const linkProps = isLinked
+    ? { href: item.url, target: "_blank", rel: "noopener noreferrer" }
+    : {};
 
   return (
-    <div
-      className={`group relative overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 transition-all duration-300 h-full ${
+    <Tag
+      {...linkProps}
+      className={`group relative overflow-hidden bg-[#0a0a0a] border border-white/5 p-8 transition-all duration-300 h-full block ${
         isTbc ? "opacity-40" : "hover:border-white/15 cursor-pointer"
       }`}
     >
@@ -52,19 +58,8 @@ function PressCard({ item }: { item: typeof pressItems[0] }) {
           <p className="font-display text-white/80 text-base italic leading-relaxed text-center">
             {item.hoverQuote}
           </p>
-          {item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute top-4 right-4 text-white/40 hover:text-[#00c4b4] transition-colors text-sm"
-              onClick={(e) => e.stopPropagation()}
-            >
-              ↗
-            </a>
-          )}
         </div>
       )}
-    </div>
+    </Tag>
   );
 }
