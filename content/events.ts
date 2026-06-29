@@ -125,6 +125,16 @@ export const events: Event[] = [
 
   // Upcoming
   {
+    id: "stonewall-summer-pride-party-2026",
+    title: "Stonewall Summer Pride Party",
+    type: "dj",
+    date: "2026-07-06",
+    venue: "The Ministry, Borough",
+    location: "London, England, UK",
+    upcoming: true,
+    url: "https://www.stonewall.org.uk/events/the-stonewall-summer-pride-party",
+  },
+  {
     id: "come-bye-festival-2026",
     title: "Come Bye Festival",
     type: "dj",
