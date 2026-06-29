@@ -4,6 +4,9 @@
 export const about = {
   tagline: "Music. Culture. Impact.",
 
+  // Availability status — "available" or "unavailable"
+  status: "unavailable" as "available" | "unavailable",
+
   // Hero sub-headline — one line that captures the full picture
   heroSubline: "Culture at the intersection of impact.",
 

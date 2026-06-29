@@ -21,6 +21,7 @@ export interface Project {
   description: string;
   url?: string;
   logoPath?: string;      // path relative to /public
+  banner?: string;        // CSS background value (colour, gradient, or url())
 }
 
 export interface PressItem {

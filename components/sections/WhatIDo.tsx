@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
 
@@ -52,13 +52,11 @@ const dimensions = [
 // How many px each card overlaps the one above it when all are collapsed.
 const OVERLAP = 20;
 
-// Fixed height (px) for the expanded content panel.
-// All cards expand to exactly this height — keeps the section size stable.
-const EXPANDED_H = 240;
-
 export default function WhatIDo() {
   const [active, setActive] = useState<number | null>(null);
-  const toggle = (i: number) => setActive((prev) => (prev === i ? null : i));
+  const toggle = (i: number) => {
+    setActive((prev) => (prev === i ? null : i));
+  };
 
   const getMarginTop = (i: number) => {
     if (i === 0) return 0;
@@ -83,7 +81,6 @@ export default function WhatIDo() {
             const isActive = active === i;
 
             return (
-              // Outer div controls stacking via CSS margin + z-index
               <div
                 key={dim.number}
                 style={{
@@ -99,17 +96,18 @@ export default function WhatIDo() {
                       isActive ? "border-white/10" : "border-white/5"
                     }`}
                   >
-                    {/* Header — always visible, click to toggle */}
+                    {/* Header */}
                     <button
                       className="w-full flex items-start gap-6 md:gap-10 px-8 md:px-10 py-5 text-left group"
                       onClick={() => toggle(i)}
                     >
-                      {/* Number */}
-                      <span
-                        className="font-display text-5xl font-bold leading-none flex-shrink-0 w-16 opacity-30 group-hover:opacity-60 transition-opacity"
-                        style={{ color: dim.accent }}
-                      >
-                        {dim.number}
+                      <span className="flex-shrink-0 w-16">
+                        <span
+                          className="font-display text-5xl font-bold leading-none opacity-30 group-hover:opacity-60 transition-opacity"
+                          style={{ color: dim.accent }}
+                        >
+                          {dim.number}
+                        </span>
                       </span>
 
                       {/* Title */}
@@ -117,7 +115,7 @@ export default function WhatIDo() {
                         {dim.title}
                       </h3>
 
-                      {/* Arrow — rotates 180° when open */}
+                      {/* Arrow */}
                       <motion.span
                         animate={{ rotate: isActive ? 180 : 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -127,55 +125,10 @@ export default function WhatIDo() {
                       </motion.span>
                     </button>
 
-                    {/* Expandable content — fixed height so all cards expand to same size */}
+                    {/* Expandable content with dynamic height */}
                     <AnimatePresence initial={false}>
                       {isActive && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: EXPANDED_H, opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.4, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          {/* Indent to align with title (spacer = number width + gap) */}
-                          <div className="flex gap-6 md:gap-10 px-8 md:px-10 pb-8">
-                            <div className="w-16 flex-shrink-0" />
-                            <div className="flex-1">
-                              <p className="font-body text-white/60 text-base leading-relaxed mb-4 max-w-2xl">
-                                {dim.description}
-                              </p>
-
-                              {/* Highlight line — spins into place */}
-                              {dim.highlight && (
-                                <div style={{ perspective: "600px" }}>
-                                  <motion.p
-                                    initial={{ opacity: 0, rotateX: 90 }}
-                                    animate={{ opacity: 1, rotateX: 0 }}
-                                    transition={{
-                                      duration: 0.45,
-                                      delay: 0.2,
-                                      ease: "easeOut",
-                                    }}
-                                    className="font-body text-xs text-[#00c4b4]/70 tracking-wide mb-4"
-                                  >
-                                    {dim.highlight}
-                                  </motion.p>
-                                </div>
-                              )}
-
-                              <div className="flex flex-wrap gap-2">
-                                {dim.tags.map((tag) => (
-                                  <span
-                                    key={tag}
-                                    className="font-body text-xs px-2.5 py-1 bg-white/5 text-white/40 tracking-wide"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </motion.div>
+                        <ExpandableContent dim={dim} />
                       )}
                     </AnimatePresence>
                   </div>
@@ -186,5 +139,70 @@ export default function WhatIDo() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ExpandableContent({ dim }: { dim: typeof dimensions[number] }) {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [measuredHeight, setMeasuredHeight] = useState(0);
+
+  const measure = useCallback(() => {
+    if (contentRef.current) {
+      setMeasuredHeight(contentRef.current.scrollHeight);
+    }
+  }, []);
+
+  useEffect(() => {
+    measure();
+  }, [measure]);
+
+  return (
+    <motion.div
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: measuredHeight || "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="overflow-hidden"
+    >
+      <div ref={contentRef}>
+        <div className="flex gap-6 md:gap-10 px-8 md:px-10 pb-8">
+          <div className="w-16 flex-shrink-0" />
+          <div className="flex-1">
+            <p className="font-body text-white/60 text-base leading-relaxed mb-4 max-w-2xl">
+              {dim.description}
+            </p>
+
+            {/* Highlight line */}
+            {dim.highlight && (
+              <div style={{ perspective: "600px" }}>
+                <motion.p
+                  initial={{ opacity: 0, rotateX: 90 }}
+                  animate={{ opacity: 1, rotateX: 0 }}
+                  transition={{
+                    duration: 0.45,
+                    delay: 0.2,
+                    ease: "easeOut",
+                  }}
+                  className="font-body text-xs text-[#00c4b4]/70 tracking-wide mb-4"
+                >
+                  {dim.highlight}
+                </motion.p>
+              </div>
+            )}
+
+            <div className="flex flex-wrap gap-2">
+              {dim.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="font-body text-xs px-2.5 py-1 bg-white/5 text-white/40 tracking-wide"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }

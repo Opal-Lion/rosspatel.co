@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, DM_Sans } from "next/font/google";
+import ScrollProgress from "@/components/layout/ScrollProgress";
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -53,7 +54,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${dmSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }

@@ -14,7 +14,7 @@ export const events: Event[] = [
     id: "earthfest-2026",
     title: "Earthfest",
     type: "speaking",
-    date: "2026-06-25",
+    date: "2026-06-24",
     venue: "",
     location: "London, England, UK",
     upcoming: true,
@@ -123,6 +123,28 @@ export const events: Event[] = [
 
   // ── DJ / Polyamoross ──────────────────────────────────────────────────────
 
+  // Upcoming
+  {
+    id: "come-bye-festival-2026",
+    title: "Come Bye Festival",
+    type: "dj",
+    date: "2026-09-18",
+    venue: "",
+    location: "Abergavenny, Wales, UK",
+    upcoming: true,
+    url: "https://www.instagram.com/come_bye_festival/",
+  },
+  {
+    id: "private-event-april-2026",
+    title: "Private Event",
+    type: "dj",
+    date: "2026-04-24",
+    venue: "",
+    location: "London, England, UK",
+    upcoming: true,
+  },
+
+  // Past
   {
     id: "club-love-loco-klub-2026",
     title: "Club Love",
