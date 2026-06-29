@@ -146,6 +146,16 @@ export const events: Event[] = [
 
   // Past
   {
+    id: "frolik-summer-of-love-2026",
+    title: "Frolik: The Summer of Love",
+    type: "dj",
+    date: "2026-06-27",
+    venue: "Shoreditch & Soul",
+    location: "London, England, UK",
+    upcoming: false,
+    url: "https://www.eventbrite.co.uk/e/frolik-the-summer-of-love-froliking-tickets-1988278677046",
+  },
+  {
     id: "club-love-loco-klub-2026",
     title: "Club Love",
     type: "dj",
