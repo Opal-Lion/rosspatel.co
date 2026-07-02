@@ -125,6 +125,15 @@ export const events: Event[] = [
 
   // Upcoming
   {
+    id: "private-event-july-2026",
+    title: "Private Event",
+    type: "dj",
+    date: "2026-07-03",
+    venue: "",
+    location: "London, UK",
+    upcoming: true,
+  },
+  {
     id: "stonewall-summer-pride-party-2026",
     title: "Stonewall Summer Pride Party",
     type: "dj",
