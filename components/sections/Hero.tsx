@@ -28,7 +28,6 @@ export default function Hero() {
           alt="Ross Patel speaking at GEI18"
           fill
           priority
-          unoptimized
           className="object-cover object-center"
           sizes="100vw"
         />
