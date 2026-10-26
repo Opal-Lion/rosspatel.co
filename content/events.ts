@@ -11,6 +11,16 @@ export const events: Event[] = [
 
   // Upcoming
   {
+    id: "cusu-hong-kong-2026",
+    title: "Culture and Sustainability Conference",
+    type: "speaking",
+    date: "2026-10-12",
+    endDate: "2026-10-13",
+    venue: "Hong Kong Academy of Performing Arts",
+    location: "Hong Kong",
+    upcoming: true,
+  },
+  {
     id: "earthfest-2026",
     title: "Earthfest",
     type: "speaking",
@@ -125,6 +135,16 @@ export const events: Event[] = [
 
   // Upcoming
   {
+    id: "club-love-loco-klub-oct-2026",
+    title: "Club Love",
+    type: "dj",
+    date: "2026-10-24",
+    venue: "Loco Klub",
+    location: "Bristol, England, UK",
+    upcoming: true,
+    url: "https://clubloveltd.com",
+  },
+  {
     id: "private-event-july-2026",
     title: "Private Event",
     type: "dj",
@@ -164,6 +184,15 @@ export const events: Event[] = [
   },
 
   // Past
+  {
+    id: "private-event-ibiza-2026",
+    title: "Private Event",
+    type: "dj",
+    date: "2026-08-12",
+    venue: "",
+    location: "Ibiza, Spain",
+    upcoming: false,
+  },
   {
     id: "frolik-summer-of-love-2026",
     title: "Frolik: The Summer of Love",

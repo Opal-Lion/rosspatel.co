@@ -8,6 +8,7 @@ export interface Event {
   title: string;          // e.g. "International Live Music Conference (ILMC 37)"
   type: EventType;
   date: string;           // ISO format: "2025-03-06"
+  endDate?: string;       // optional ISO end date for multi-day events, e.g. "2026-10-13"
   venue: string;          // e.g. "Royal Garden Hotel, London"
   location: string;       // e.g. "London, UK"
   upcoming: boolean;

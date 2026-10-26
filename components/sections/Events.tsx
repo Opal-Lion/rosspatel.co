@@ -32,12 +32,31 @@ function formatDate(iso: string) {
   return `${ordinal(day)} ${monthName} ${year}`;
 }
 
+function monthLong(iso: string) {
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-GB", { month: "long" });
+}
+
+// Single date, or a range for multi-day events (endDate set), e.g. "12th & 13th October 2026".
+function formatEventDate(e: { date: string; endDate?: string }) {
+  if (!e.endDate) return formatDate(e.date);
+  const [y1, m1, d1] = e.date.split("-").map(Number);
+  const [y2, m2, d2] = e.endDate.split("-").map(Number);
+  if (y1 === y2 && m1 === m2) return `${ordinal(d1)} & ${ordinal(d2)} ${monthLong(e.date)} ${y1}`;
+  if (y1 === y2) return `${ordinal(d1)} ${monthLong(e.date)} & ${ordinal(d2)} ${monthLong(e.endDate)} ${y1}`;
+  return `${formatDate(e.date)} & ${formatDate(e.endDate)}`;
+}
+
 const countryFlags: Record<string, string> = {
   UK: "\u{1F1EC}\u{1F1E7}",
   DE: "\u{1F1E9}\u{1F1EA}",
   USA: "\u{1F1FA}\u{1F1F8}",
   NL: "\u{1F1F3}\u{1F1F1}",
   PT: "\u{1F1F5}\u{1F1F9}",
+  ES: "\u{1F1EA}\u{1F1F8}",
+  Spain: "\u{1F1EA}\u{1F1F8}",
+  HK: "\u{1F1ED}\u{1F1F0}",
+  "Hong Kong": "\u{1F1ED}\u{1F1F0}",
 };
 
 function getFlag(location: string): string {
@@ -309,7 +328,7 @@ export default function Events() {
                               </p>
                             </div>
                             <div className="flex items-center gap-4">
-                              <span className="font-body text-xs text-white/30">{formatDate(event.date)}</span>
+                              <span className="font-body text-xs text-white/30">{formatEventDate(event)}</span>
                               {isUpcoming(event) && (
                                 <button
                                   onClick={() => generateICS(event)}
@@ -393,7 +412,7 @@ function EventRow({
       </div>
 
       <div className="flex items-center gap-6 flex-shrink-0 pl-10 sm:pl-0">
-        <p className="font-body text-sm text-white/40">{formatDate(e.date)}</p>
+        <p className="font-body text-sm text-white/40">{formatEventDate(e)}</p>
         {isUpcoming && (
           <button
             onClick={() => generateICS(e)}
