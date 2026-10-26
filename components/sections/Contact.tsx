@@ -102,6 +102,7 @@ export default function Contact() {
                 { label: "Instagram", url: "https://instagram.com/rosswellpatel" },
                 { label: "X / Twitter", url: "https://x.com/rosswellpatel" },
                 { label: "Resident Advisor", url: "https://ra.co/dj/polyamoross" },
+                { label: "Mixcloud", url: "https://www.mixcloud.com/Polyamoross/" },
               ].map((link) => (
                 <a
                   key={link.label}
