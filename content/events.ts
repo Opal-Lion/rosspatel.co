@@ -12,13 +12,24 @@ export const events: Event[] = [
   // Upcoming
   {
     id: "cusu-hong-kong-2026",
-    title: "Culture and Sustainability Conference",
+    title: "Hong Kong Culture and Sustainability Conference (CU:SU)",
     type: "speaking",
     date: "2026-10-12",
     endDate: "2026-10-13",
     venue: "Hong Kong Academy of Performing Arts",
     location: "Hong Kong",
-    upcoming: true,
+    upcoming: false,
+    url: "https://www.hkapa.edu/cusu2026",
+  },
+  {
+    id: "sustainable-events-summit-2026",
+    title: "Sustainable Events Summit",
+    type: "speaking",
+    date: "2026-10-21",
+    venue: "Newbury Showground",
+    location: "Newbury, England, UK",
+    upcoming: false,
+    url: "https://visionsustainableevents.org/sustainable-event-summit-2026/",
   },
   {
     id: "earthfest-2026",
