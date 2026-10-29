@@ -38,7 +38,7 @@ export const events: Event[] = [
     date: "2026-06-24",
     venue: "",
     location: "London, England, UK",
-    upcoming: true,
+    upcoming: false,
   },
   {
     id: "climate-live-2026",
@@ -47,7 +47,7 @@ export const events: Event[] = [
     date: "2026-04-08",
     venue: "Brian Eno's Studio",
     location: "London, England, UK",
-    upcoming: true,
+    upcoming: false,
   },
 
   // Past
@@ -152,7 +152,7 @@ export const events: Event[] = [
     date: "2026-10-24",
     venue: "Loco Klub",
     location: "Bristol, England, UK",
-    upcoming: true,
+    upcoming: false,
     url: "https://clubloveltd.com",
   },
   {
@@ -162,7 +162,7 @@ export const events: Event[] = [
     date: "2026-07-03",
     venue: "",
     location: "London, UK",
-    upcoming: true,
+    upcoming: false,
   },
   {
     id: "stonewall-summer-pride-party-2026",
@@ -171,7 +171,7 @@ export const events: Event[] = [
     date: "2026-07-06",
     venue: "The Ministry, Borough",
     location: "London, England, UK",
-    upcoming: true,
+    upcoming: false,
     url: "https://www.stonewall.org.uk/events/the-stonewall-summer-pride-party",
   },
   {
@@ -181,7 +181,7 @@ export const events: Event[] = [
     date: "2026-09-18",
     venue: "",
     location: "Abergavenny, Wales, UK",
-    upcoming: true,
+    upcoming: false,
     url: "https://www.instagram.com/come_bye_festival/",
   },
   {
@@ -191,7 +191,7 @@ export const events: Event[] = [
     date: "2026-04-24",
     venue: "",
     location: "London, England, UK",
-    upcoming: true,
+    upcoming: false,
   },
 
   // Past
@@ -225,8 +225,17 @@ export const events: Event[] = [
     url: "https://clubloveltd.com",
   },
   {
+    id: "bonanza-ade-mixer-2025",
+    title: "The Bonanza ADE Mixer (The Media Nanny), with Mochakk",
+    type: "dj",
+    date: "2025-10-22",
+    venue: "Hotel De L'Europe",
+    location: "Amsterdam, NL",
+    upcoming: false,
+  },
+  {
     id: "come-bye-festival-2025",
-    title: "Come By Festival",
+    title: "Come Bye Festival",
     type: "dj",
     date: "2025-09-11",
     venue: "",
@@ -281,6 +290,15 @@ export const events: Event[] = [
     date: "2025-01-09",
     venue: "Drama Bar",
     location: "Lisbon, PT",
+    upcoming: false,
+  },
+  {
+    id: "bonanza-ade-mixer-2024",
+    title: "The Bonanza ADE Mixer (The Media Nanny), with Seth Troxler",
+    type: "dj",
+    date: "2024-10-16",
+    venue: "Hotel De L'Europe",
+    location: "Amsterdam, NL",
     upcoming: false,
   },
   {
