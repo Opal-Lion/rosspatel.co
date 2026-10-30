@@ -302,6 +302,15 @@ export const events: Event[] = [
     upcoming: false,
   },
   {
+    id: "disco-disco-pikes-2024",
+    title: "Disco Disco with Liam Smith (The Real Escobar)",
+    type: "dj",
+    date: "2024-08-07",
+    venue: "Pikes",
+    location: "Ibiza, Spain",
+    upcoming: false,
+  },
+  {
     id: "glastonbury-2024",
     title: "Glastonbury Festival, Glastonbury On Sea",
     type: "dj",
