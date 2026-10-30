@@ -302,6 +302,16 @@ export const events: Event[] = [
     upcoming: false,
   },
   {
+    id: "glastonbury-2024",
+    title: "Glastonbury Festival, Glastonbury On Sea",
+    type: "dj",
+    date: "2024-06-27",
+    venue: "Glastonbury On Sea",
+    location: "Pilton, Somerset, England, UK",
+    upcoming: false,
+    url: "https://www.glastonburyfestivals.co.uk/",
+  },
+  {
     id: "club-love-members-2024",
     title: "Club Love",
     type: "dj",
