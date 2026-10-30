@@ -153,7 +153,7 @@ export const events: Event[] = [
     venue: "Loco Klub",
     location: "Bristol, England, UK",
     upcoming: false,
-    url: "https://clubloveltd.com",
+    url: "https://ra.co/events/2565562",
   },
   {
     id: "private-event-july-2026",
@@ -222,7 +222,7 @@ export const events: Event[] = [
     venue: "Loco Klub",
     location: "Bristol, England, UK",
     upcoming: false,
-    url: "https://clubloveltd.com",
+    url: "https://www.headfirstbristol.co.uk/whats-on/loco-klub/sat-21-feb-club-love-members-party-february-145670",
   },
   {
     id: "bonanza-ade-mixer-2025",
@@ -291,6 +291,7 @@ export const events: Event[] = [
     venue: "Drama Bar",
     location: "Lisbon, PT",
     upcoming: false,
+    url: "https://www.instagram.com/lovrs_world_/",
   },
   {
     id: "bonanza-ade-mixer-2024",
@@ -309,6 +310,7 @@ export const events: Event[] = [
     venue: "Pikes",
     location: "Ibiza, Spain",
     upcoming: false,
+    url: "https://grayarea.co/events/disco-disco-week-3-aug-7-2024",
   },
   {
     id: "glastonbury-2024",
@@ -328,6 +330,7 @@ export const events: Event[] = [
     venue: "The Loco Klub",
     location: "Bristol, England, UK",
     upcoming: false,
+    url: "https://www.headfirstbristol.co.uk/whats-on/loco-klub/fri-17-may-club-love-members-party-107608",
   },
   {
     id: "queens-yard-2024",
@@ -337,6 +340,7 @@ export const events: Event[] = [
     venue: "Hackney Wick Multiple Venues",
     location: "London, England, UK",
     upcoming: false,
+    url: "https://ra.co/events/1699435",
   },
   {
     id: "body-movements-winter-2024",
