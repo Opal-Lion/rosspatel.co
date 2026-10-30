@@ -16,7 +16,7 @@ const FILTERS: { label: string; value: Filter }[] = [
   { label: "DJ / Polyamoross", value: "dj" },
 ];
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE_OPTIONS = [5, 10, 20];
 
 function ordinal(n: number) {
   const s = ["th", "st", "nd", "rd"];
@@ -95,6 +95,7 @@ export default function Events() {
   const [filter, setFilter] = useState<Filter>("all");
   const [page, setPage] = useState(0);
   const [view, setView] = useState<ViewMode>("list");
+  const [pageSize, setPageSize] = useState(PAGE_SIZE_OPTIONS[0]);
 
   const handleFilter = (f: Filter) => {
     setFilter(f);
@@ -122,8 +123,13 @@ export default function Events() {
 
   const past = filtered.filter((e) => !isUpcoming(e));
 
-  const totalPages = Math.ceil(past.length / PAGE_SIZE);
-  const paginatedPast = past.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const totalPages = Math.ceil(past.length / pageSize);
+  const paginatedPast = past.slice(page * pageSize, (page + 1) * pageSize);
+
+  const handlePageSize = (size: number) => {
+    setPageSize(size);
+    setPage(0);
+  };
 
   // Timeline data: all filtered events sorted chronologically
   const timelineEvents = [...filtered].sort(
@@ -233,25 +239,45 @@ export default function Events() {
                   ))}
                 </div>
 
-                {totalPages > 1 && (
-                  <div className="flex items-center gap-4 mt-6">
-                    <button
-                      onClick={() => setPage((p) => Math.max(0, p - 1))}
-                      disabled={page === 0}
-                      className="font-body text-sm text-white/40 hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors px-3 py-1 border border-white/10 hover:border-white/30 disabled:border-white/5"
-                    >
-                      ←
-                    </button>
-                    <span className="font-body text-xs text-white/30 tracking-widest">
-                      {page + 1} / {totalPages}
-                    </span>
-                    <button
-                      onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-                      disabled={page === totalPages - 1}
-                      className="font-body text-sm text-white/40 hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors px-3 py-1 border border-white/10 hover:border-white/30 disabled:border-white/5"
-                    >
-                      →
-                    </button>
+                {past.length > PAGE_SIZE_OPTIONS[0] && (
+                  <div className="flex items-center justify-between gap-4 mt-6">
+                    <div className="flex items-center gap-4">
+                      <button
+                        onClick={() => setPage((p) => Math.max(0, p - 1))}
+                        disabled={page === 0}
+                        className="font-body text-sm text-white/40 hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors px-3 py-1 border border-white/10 hover:border-white/30 disabled:border-white/5"
+                      >
+                        ←
+                      </button>
+                      <span className="font-body text-xs text-white/30 tracking-widest">
+                        {page + 1} / {totalPages}
+                      </span>
+                      <button
+                        onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                        disabled={page === totalPages - 1}
+                        className="font-body text-sm text-white/40 hover:text-white disabled:opacity-20 disabled:cursor-not-allowed transition-colors px-3 py-1 border border-white/10 hover:border-white/30 disabled:border-white/5"
+                      >
+                        →
+                      </button>
+                    </div>
+
+                    {/* Per page toggle */}
+                    <div className="flex items-center gap-1" aria-label="Events per page">
+                      {PAGE_SIZE_OPTIONS.map((size) => (
+                        <button
+                          key={size}
+                          onClick={() => handlePageSize(size)}
+                          aria-pressed={pageSize === size}
+                          className={`font-body text-xs tracking-wider px-3 py-1 border transition-colors ${
+                            pageSize === size
+                              ? "bg-white/10 border-white/20 text-white/70"
+                              : "border-white/10 text-white/30 hover:text-white/50"
+                          }`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

@@ -226,7 +226,7 @@ export const events: Event[] = [
   },
   {
     id: "bonanza-ade-mixer-2025",
-    title: "The Bonanza ADE Mixer (The Media Nanny), with Mochakk",
+    title: "The Bonanza ADE Mixer (The Media Nanny), w/ Mochakk",
     type: "dj",
     date: "2025-10-22",
     venue: "Hotel De L'Europe",
@@ -294,7 +294,7 @@ export const events: Event[] = [
   },
   {
     id: "bonanza-ade-mixer-2024",
-    title: "The Bonanza ADE Mixer (The Media Nanny), with Seth Troxler",
+    title: "The Bonanza ADE Mixer (The Media Nanny), w/ Seth Troxler",
     type: "dj",
     date: "2024-10-16",
     venue: "Hotel De L'Europe",
@@ -303,7 +303,7 @@ export const events: Event[] = [
   },
   {
     id: "disco-disco-pikes-2024",
-    title: "Disco Disco with Liam Smith (The Real Escobar)",
+    title: "Disco Disco",
     type: "dj",
     date: "2024-08-07",
     venue: "Pikes",
