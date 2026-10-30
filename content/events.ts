@@ -274,16 +274,6 @@ export const events: Event[] = [
     url: "https://www.carbontrust.com/",
   },
   {
-    id: "club-love-2025",
-    title: "Club Love",
-    type: "dj",
-    date: "2025-03-22",
-    venue: "Loco Klub",
-    location: "Bristol, England, UK",
-    upcoming: false,
-    url: "https://clubloveltd.com",
-  },
-  {
     id: "lovrs-lisbon-2025",
     title: "LOVRS",
     type: "dj",
@@ -341,6 +331,16 @@ export const events: Event[] = [
     location: "London, England, UK",
     upcoming: false,
     url: "https://ra.co/events/1699435",
+  },
+  {
+    id: "club-love-mar-2024",
+    title: "Club Love",
+    type: "dj",
+    date: "2024-03-23",
+    venue: "Loco Klub",
+    location: "Bristol, England, UK",
+    upcoming: false,
+    url: "https://www.headfirstbristol.co.uk/whats-on/loco-klub-the/sat-23-mar-club-love-members-party-103892",
   },
   {
     id: "body-movements-winter-2024",
